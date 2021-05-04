@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+
+    <body>
+        
+        <header>
+            <h1>Create your burger</h1>
+        </header>
+
+
+        <main>
+            <div>
+                <div class="form-group">
+                    <input type="name" class="form-control" name="burger_name" id="burger_name" placeholder="Name Your Burger">
+                </div>
+                
+                <div class="form-check">
+                    <img src="./assets/img/cheese.svg" alt="">
+                    <label class="form-check-label" for="cheese">Cheese</label>
+                    <input type="checkbox" id="cheese" data-price="0.5">
+                </div>
+
+                <div class="form-check">
+                    <img src="./assets/img/fried-egg.svg" alt="">
+                    <label class="form-check-label" for="fried_egg">Egg</label>
+                    <input type="checkbox" id="egg" data-price="0.5">
+                </div>
+
+                <div class="form-check">
+                    <img src="./assets/img/mustard.svg" alt="">
+                    <label class="form-check-label" for="mustard">Mustard</label>
+                    <input type="checkbox" id="mustard" data-price="0.3">
+                </div>
+
+                <div class="form-check">
+                    <img src="./assets/img/tomato.svg" alt="">
+                    <label class="form-check-label" for="tomato">Tomato</label>
+                    <input type="checkbox" id="tomato" data-price="0.5">
+                </div>
+
+                <div class="form-check">
+                    <img src="./assets/img/lettuce.svg" alt="">
+                    <label class="form-check-label" for="lettuce">Lettuce</label>
+                    <input type="checkbox" id="lettuce" data-price="0.3">
+                </div>
+
+                <div class="form-check">
+                    <img src="./assets/img/ketchup.svg" alt="">
+                    <label class="form-check-label" for="ketchup">Ketchup</label>
+                    <input type="checkbox" id="ketchup" data-price="0.3">
+                </div>
+
+                <div class="form-group">
+                    <label for="coupon_code">Coupon code</label>
+                    <input type="text" name="coupon_code" id="coupon_code" placeholder="0000000000">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Calculate</button>
+            </div>
+        </main>
+
+
+        <footer>
+            <h2>Your Price</h2>
+        </footer>
+
+        <script src="./assets/js/main.js"></script>
+    </body>
+
+</html>
