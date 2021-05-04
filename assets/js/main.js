@@ -21,11 +21,11 @@ document.querySelector("button").addEventListener("click", function () {
         var ingredienteSelezionato = ingrediente.checked;
 
         if (ingredienteSelezionato == true) {
-            var somma = prezzoBase += prezzoIngrediente
-            document.getElementById("final_price").innerHTML = (somma + "€")
+            var somma = (prezzoBase += prezzoIngrediente);
+            document.getElementById("final_price").innerHTML = (somma + "€");
         } else {
-            somma = prezzoBase
-            document.getElementById("final_price").innerHTML = (somma + "€")
+            somma = prezzoBase;
+            document.getElementById("final_price").innerHTML = (somma + "€");
         }
     }
 
@@ -33,8 +33,7 @@ document.querySelector("button").addEventListener("click", function () {
 
     for (var j = 0; j < elencoCodiciCoupon.length; j++) {
         if (codiceCouponUtente === elencoCodiciCoupon[j]) {
-            var somma = somma - scontoDaApplicare
-            console.log(somma);
+            var somma = (somma - scontoDaApplicare);
             document.getElementById("final_price").innerHTML = (somma + "€")
         }
     }
