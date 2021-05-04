@@ -9,7 +9,7 @@ visiva lavorando al css. */
 
 var ingredienti = document.querySelectorAll('input[type=checkbox]');
 var prezzoBase = Number("5");
-var elencoCodiciCoupon = ["000000", "111111", "222222", "333333"];
+var elencoCodiciCoupon = ["000000", "111111", "222222", "333333", "444444"];
 
 document.querySelector("button").addEventListener("click", function () {
 
