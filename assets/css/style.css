@@ -1,3 +1,48 @@
+/* CSS Common */
+body {
+    width: 50%; 
+}
+main {
+    background-color: white;
+}
+footer {
+    background-color: #d33359;
+}
+
 img {
     width: 50px;
+}
+
+/* CSS Header */
+#hamburger_header {
+    width: 250px;
+    top: -5px;
+    right: -100px;
+}
+
+/* CSS Main */
+.form-control {
+    border: none;
+}
+#coupon_code {
+    width: 80%;
+}
+#burger_name::placeholder {
+    font-size: 30px;
+}
+
+/* .form-check > input {
+    background: #990000!important;
+} */
+.form-check::after {
+    content: "add";
+    color: #d33359;
+    font-weight: bold;
+}
+/* CSS Utilities */
+.bg_orange {
+    background-color: #fdbb40;
+}
+.bg_salmon {
+    background-color: #fff5e2;
 }

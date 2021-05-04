@@ -11,67 +11,81 @@
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
 
-    <body>
+    <body class="bg_salmon">
         
-        <header>
-            <h1>Create your burger</h1>
+        <header class="bg_orange p-5 position-relative">
+            <img src="./assets/img/burger-top.png" alt="" id="hamburger_header" class="position-absolute">
+            <h1 class="m-0 font-weight-bold">Create your burger</h1>
         </header>
 
-
         <main>
-            <div>
+            <div class="container p-5">
                 <div class="form-group">
-                    <input type="name" class="form-control" name="burger_name" id="burger_name" placeholder="Name Your Burger">
+                    <input type="name" class="form-control p-0" name="burger_name" id="burger_name" placeholder="Name Your Burger">
                 </div>
+
+                <h3>Ingredients</h3>
                 
-                <div class="form-check">
-                    <img src="./assets/img/cheese.svg" alt="">
-                    <label class="form-check-label" for="cheese">Cheese</label>
-                    <input type="checkbox" id="cheese" data-price="0.5">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-check my-4">
+                            <img src="./assets/img/cheese.svg" alt="" class="mr-2">
+                            <label class="form-check-label mr-2" for="cheese">Cheese</label>
+                            <input type="checkbox" class="pink_box mr-2" id="cheese" data-price="0.5">
+                        </div>
+        
+                        <div class="form-check my-4">
+                            <img src="./assets/img/fried-egg.svg" alt="" class="mr-2">
+                            <label class="form-check-label mr-2" for="fried_egg">Egg</label>
+                            <input type="checkbox" class="pink_box mr-2" id="egg" data-price="0.5">
+                        </div>
+        
+                        <div class="form-check my-4">
+                            <img src="./assets/img/mustard.svg" alt="" class="mr-2">
+                            <label class="form-check-label mr-2" for="mustard">Mustard</label>
+                            <input type="checkbox" class="pink_box mr-2" id="mustard" data-price="0.3">
+                        </div>
+                    </div>
+    
+                    <div class="col-6">
+                        <div class="form-check my-4">
+                            <img src="./assets/img/tomato.svg" alt="" class="mr-2">
+                            <label class="form-check-label mr-2" for="tomato">Tomato</label>
+                            <input type="checkbox" class="pink_box mr-2" id="tomato" data-price="0.5">
+                        </div>
+        
+                        <div class="form-check my-4">
+                            <img src="./assets/img/lettuce.svg" alt="" class="mr-2">
+                            <label class="form-check-label mr-2" for="lettuce">Lettuce</label>
+                            <input type="checkbox" class="pink_box mr-2" id="lettuce" data-price="0.3">
+                        </div>
+        
+                        <div class="form-check my-4">
+                            <img src="./assets/img/ketchup.svg" alt="" class="mr-2">
+                            <label class="form-check-label mr-2" for="ketchup">Ketchup</label>
+                            <input type="checkbox" class="pink_box mr-2" id="ketchup" data-price="0.3">
+                        </div>
+        
+                    </div>
+
                 </div>
 
-                <div class="form-check">
-                    <img src="./assets/img/fried-egg.svg" alt="">
-                    <label class="form-check-label" for="fried_egg">Egg</label>
-                    <input type="checkbox" id="egg" data-price="0.5">
+                
+                <div class="form-group d-flex justify-content-between">
+                    <label for="coupon_code">Discount Coupon</label>
+                    <input type="text" name="coupon_code" class="bg_salmon form-control" id="coupon_code" placeholder="0000000000">
                 </div>
 
-                <div class="form-check">
-                    <img src="./assets/img/mustard.svg" alt="">
-                    <label class="form-check-label" for="mustard">Mustard</label>
-                    <input type="checkbox" id="mustard" data-price="0.3">
+                <div class="d-flex justify-content-center my-5">
+                    <button type="submit" class="btn bg_orange font-weight-bold px-4 py-2">Calculate</button>
                 </div>
-
-                <div class="form-check">
-                    <img src="./assets/img/tomato.svg" alt="">
-                    <label class="form-check-label" for="tomato">Tomato</label>
-                    <input type="checkbox" id="tomato" data-price="0.5">
-                </div>
-
-                <div class="form-check">
-                    <img src="./assets/img/lettuce.svg" alt="">
-                    <label class="form-check-label" for="lettuce">Lettuce</label>
-                    <input type="checkbox" id="lettuce" data-price="0.3">
-                </div>
-
-                <div class="form-check">
-                    <img src="./assets/img/ketchup.svg" alt="">
-                    <label class="form-check-label" for="ketchup">Ketchup</label>
-                    <input type="checkbox" id="ketchup" data-price="0.3">
-                </div>
-
-                <div class="form-group">
-                    <label for="coupon_code">Coupon code</label>
-                    <input type="text" name="coupon_code" id="coupon_code" placeholder="0000000000">
-                </div>
-
-                <button type="submit" class="btn btn-primary">Calculate</button>
             </div>
         </main>
 
 
-        <footer>
+        <footer class="p-5 text-white d-flex justify-content-between">
             <h2>Your Price</h2>
+            <h2 id="final_price"></h2>
         </footer>
 
         <script src="./assets/js/main.js"></script>

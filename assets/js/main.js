@@ -22,15 +22,20 @@ document.querySelector("button").addEventListener("click", function () {
 
         if (ingredienteSelezionato == true) {
             var somma = prezzoBase += prezzoIngrediente
-        } 
+            document.getElementById("final_price").innerHTML = (somma + "€")
+        } else {
+            somma = prezzoBase
+            document.getElementById("final_price").innerHTML = (somma + "€")
+        }
     }
 
     var scontoDaApplicare = somma * 0.2;
 
     for (var j = 0; j < elencoCodiciCoupon.length; j++) {
-
         if (codiceCouponUtente === elencoCodiciCoupon[j]) {
             var somma = somma - scontoDaApplicare
+            console.log(somma);
+            document.getElementById("final_price").innerHTML = (somma + "€")
         }
     }
 
