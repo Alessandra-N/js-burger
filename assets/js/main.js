@@ -7,12 +7,13 @@ e poi traduciamo in codice.
 console.log() è nostro amico. Quando tutto funziona passate alla parte 
 visiva lavorando al css. */
 
-var ingredienti = document.querySelectorAll('input[type=checkbox]');
-var prezzoBase = Number("5");
+
 var elencoCodiciCoupon = ["000000", "111111", "222222", "333333", "444444"];
 
-document.querySelector("button").addEventListener("click", function () {
+document.querySelector("button.calc").addEventListener("click", function () {
 
+    var ingredienti = document.querySelectorAll('input[type=checkbox]');
+    var prezzoBase = Number("5");
     var codiceCouponUtente = document.getElementById("coupon_code").value;
 
     for (var i = 0; i < ingredienti.length; i++) {
@@ -22,10 +23,10 @@ document.querySelector("button").addEventListener("click", function () {
 
         if (ingredienteSelezionato == true) {
             var somma = (prezzoBase += prezzoIngrediente);
-            document.getElementById("final_price").innerHTML = (somma + "€");
+            document.getElementById("final_price").innerHTML = (somma.toFixed(2) + "€");
         } else {
             somma = prezzoBase;
-            document.getElementById("final_price").innerHTML = (somma + "€");
+            document.getElementById("final_price").innerHTML = (somma.toFixed(2) + "€");
         }
     }
 
@@ -34,9 +35,8 @@ document.querySelector("button").addEventListener("click", function () {
     for (var j = 0; j < elencoCodiciCoupon.length; j++) {
         if (codiceCouponUtente === elencoCodiciCoupon[j]) {
             var somma = (somma - scontoDaApplicare);
-            document.getElementById("final_price").innerHTML = (somma + "€")
+            document.getElementById("final_price").innerHTML = (somma.toFixed(2) + "€")
         }
     }
-
 });
 
